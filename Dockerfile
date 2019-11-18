@@ -4,12 +4,12 @@ COPY server.R /srv/shiny-server/stockbook/
 COPY ui.R /srv/shiny-server/stockbook/
 #COPY ForecastingData.csv /srv/shiny-server/stockbook/
 #COPY ForecastOptionsV2.csv /srv/shiny-server/stockbook/
-#COPY ["ICES-New-Old - extra species.csv", "/srv/shiny-server/stockbook/"]
-COPY Introduction.csv /srv/shiny-server/stockbook/
-#COPY IntroductionTable.csv /srv/shiny-server/stockbook/
-#COPY KeyPoints.csv /srv/shiny-server/stockbook/
-#COPY ManagementAdvice.csv /srv/shiny-server/stockbook/
-#COPY MixedFish.csv /srv/shiny-server/stockbook/
+COPY ["filesToRead/ICES-New-Old - extra species.csv", "/srv/shiny-server/stockbook/filesToRead/"]
+COPY filesToRead/Introduction.csv /srv/shiny-server/stockbook/filesToRead/
+COPY filesToRead/IntroductionTable.csv /srv/shiny-server/stockbook/filesToRead/
+COPY filesToRead/KeyPoints.csv /srv/shiny-server/stockbook/filesToRead/
+COPY filesToRead/ManagementAdvice.csv /srv/shiny-server/stockbook/filesToRead/
+COPY filesToRead/MixedFish.csv /srv/shiny-server/stockbook/filesToRead/
 EXPOSE 3838
 CMD ["/usr/bin/shiny-server.sh"]
 # docker build -t mi/shinytext:test .

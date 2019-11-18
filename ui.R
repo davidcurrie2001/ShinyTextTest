@@ -20,7 +20,7 @@ shinyUI(fluidPage(
     sidebarPanel(
       selectInput("file",
                    "Choose a file:",
-                   c("Introduction"))
+                   c("None","Introduction","ICES New-old", "IntroductionTable", "KeyPoints","ManagementAdvice","MixedFish"))
     ),
     
     # Show a plot of the generated distribution
